@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
+    android:label="About"
     app:startDestination="@id/titleFragment">
 
     <fragment
@@ -13,5 +14,5 @@
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.example.newfirstapp.AboutFragment"
-        android:label="AboutFragment" />
+        android:label="About" />
 </navigation>
