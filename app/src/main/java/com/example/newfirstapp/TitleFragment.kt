@@ -15,7 +15,6 @@ class TitleFragment: Fragment() {
         val binding = DataBindingUtil.inflate<FragmentTitleBinding>(inflater,
             R.layout.fragment_title,container,false)
 
-        setHasOptionsMenu(true)
         return binding.root
     }
 }
