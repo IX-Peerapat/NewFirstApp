@@ -1,17 +1,16 @@
 package com.example.newfirstapp.Database
 
 import androidx.lifecycle.LiveData
+import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 
+@Dao
 interface ContactDao {
-    @Insert
-    fun insert(night: Contact)
+    @Query("SELECT * from Contact_table ORDER BY name ASC")
+    fun getAllContact(): LiveData<List<Contact>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun get(contact: Contact)
-
-    @Query("SELECT * FROM contact_table ORDER BY name ASC")
-    fun getAllContact(): LiveData<List<Contact>>
+    fun insert(contact: Contact)
 }
