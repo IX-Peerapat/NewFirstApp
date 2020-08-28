@@ -12,40 +12,57 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#B7EDEB"
         tools:context=".contact.ContactFragment">
 
         <!-- TODO: Update blank fragment layout -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
-                android:layout_width="match_parent"
+                android:id="@+id/textName"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autofillHints=""
                 android:ems="10"
-                android:inputType="text" />
+                android:fontFamily="@font/amaranth"
+                android:hint="Name"
+                android:inputType="text"
+                android:textColor="@android:color/black" />
 
             <EditText
-                android:id="@+id/editTextTextPersonPhone"
-                android:layout_width="match_parent"
+                android:id="@+id/textLast"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autofillHints=""
                 android:ems="10"
-                android:inputType="text" />
+                android:fontFamily="@font/amaranth"
+                android:hint="Lastname"
+                android:inputType="text"
+                android:textColor="@android:color/black" />
 
             <Button
                 android:id="@+id/buttonInsert"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#DA3AD82B"
+                android:fontFamily="@font/bangers"
                 android:onClick="@{()->contactViewModel.onContactAdd()}"
-                android:text="Button" />
+                android:text="SAVE"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/textview"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@{contactViewModel.contactString}" />
+                android:text="@{contactViewModel.contactString}"
+                android:textColor="@android:color/black" />
 
         </LinearLayout>
 
